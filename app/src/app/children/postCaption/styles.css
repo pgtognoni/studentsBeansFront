@@ -1,0 +1,15 @@
+.comment-section {
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.comments-container{
+    font-size: 14px;
+    padding: .5rem 0 0;
+}
+
+.comment_username {
+    font-weight: 700;
+    margin-right: .2rem;
+}

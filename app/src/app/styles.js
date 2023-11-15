@@ -7,10 +7,11 @@ export default {
     maxWidth: '935px',
     margin: '16px auto',
     width: 'calc(100% - 40px)',
+    boxSizing: 'border-box',
 
     display: 'flex',
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexWrap: 'no-wrap',
     justifyContent: 'flex-start',
     alignContent: 'stretch',
     alignItems: 'flex-start'
@@ -24,7 +25,8 @@ export default {
 
   text: {
     order: '2',
-    flex: '1 0 40%',
-    alignSelf: 'flex-start'
+    flex: '1 1 40%',
+    alignSelf: 'flex-start',
+    padding: '0 1.5rem'
   }
 }
