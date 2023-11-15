@@ -1,6 +1,7 @@
-import FormatedComment from "../postCaption/FormatedComment";
-import { getCommentText, getOwnerUsername } from "./helpers";
-import '../postCaption/styles.css'
+import FormatedComment from "./FormatedComment";
+import { getCommentText, getOwnerUsername, getViewerLiked} from "./helpers";
+import LikeButton from "../like_button";
+import './styles.css'
 
 function GetUserCommentData (props) {
     const { data } = props;
@@ -9,8 +10,13 @@ function GetUserCommentData (props) {
             {data.edge_media_to_comment.edges.map((comment, index) => {
                 return(
                     <div key={index} className='comments-container'>
-                        <span className='comment_username'>{getOwnerUsername(comment)}</span>
-                        <FormatedComment data={getCommentText(comment)} />
+                        <div>
+                            <span className='comment_username'>{getOwnerUsername(comment)}</span>
+                            <FormatedComment data={getCommentText(comment)} />
+                        </div>
+                        <div className='comment-like-btn'>
+                            <LikeButton data={getViewerLiked(comment)} />
+                        </div>
                     </div>
                 )
             })}

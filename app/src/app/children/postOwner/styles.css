@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     padding: .8rem 0;
+    margin: 0 1.5rem;
     border-bottom: 1px solid #e6e6e6;
 }
 
 .owner-container div:first-child {
     width: 50px;
     height: 50px;
+    min-width: 50px;
 }
 
 .owner-container div img {
@@ -18,16 +20,70 @@
 
 .owner_informtion {
     margin-left: .4em;
+    width: 100%;
+
 }
 
 .owner_informtion p {
     margin: 0;
 }
 
-p.owner_name {
+.owner_name {
     font-size: 14px;
     font-weight: 700;
-    margin: 0 0 3px 0;
+    /* margin: 0 0 3px 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#timeStamp-btn {
+   cursor: pointer;
+   margin-top: -4px;
+}
+
+.title-time-stamp {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: .6;
+}
+
+@media screen and (min-width: 550px) {
+
+    .owner_name {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .name {
+        width: unset;
+    }
+
+    #timeStamp-btn {
+        display: none;
+        margin-top: 0;
+    }
+
+    .title-time-stamp {
+        display: block;
+    }
+
+    .title-time-stamp::before {
+        content:" - ";
+        margin-left: 4px;
+    }
+}
+
+@media screen and (min-width: 935px) {
+    .title-time-stamp {
+        display: none;
+    }
 }
 
 .owner_location {

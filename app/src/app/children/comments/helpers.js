@@ -5,3 +5,7 @@ export function getCommentText (data) {
 export function getOwnerUsername (data) {
     return data.node.owner.username;
 }
+
+export function getViewerLiked (data){
+    return data.viewer_has_liked;
+}

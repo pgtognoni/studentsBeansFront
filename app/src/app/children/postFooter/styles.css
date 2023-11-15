@@ -1,0 +1,42 @@
+.footer-container {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem 0;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .8rem;
+}
+
+.number-likes {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-time-stamp {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: .4;
+    display: none;
+}
+
+@media  screen and (min-width: 935px) {
+    .footer-time-stamp {
+        display: block;
+    }
+    
+}
+
+.footer-like-btn {
+    margin: 0 1rem;
+
+}
+.footer-like-btn svg {
+    width: 2rem;
+}

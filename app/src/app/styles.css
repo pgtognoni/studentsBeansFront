@@ -1,0 +1,43 @@
+.main {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    max-width: 935px;
+    max-width: 470px;
+    margin: 16px auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 935px) {
+    .main {
+      grid-template-columns: repeat(11, 1fr);
+      max-width: 935px;
+    }
+
+    .post-image {
+        grid-column: 1/8;
+        grid-row: 1/4;
+        order: 1;
+        align-self: center;
+    }
+
+    .owner-container {
+        grid-column: 8 / 12;
+        order: 2
+    }
+
+    .comment-section {
+        grid-column: 8 / 12;
+        order: 3;
+    }
+
+    .footer-container {
+        grid-column: 8 / 12;
+        order: 4;
+    }
+  }
+  

@@ -1,0 +1,31 @@
+.comment-section {
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-left: 1.5rem;
+    font-size: 14px;
+}
+
+.caption-container {
+    padding: .5rem 0 0;
+}
+
+.comments-container {
+    padding: .4rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.comment_username {
+    font-weight: 700;
+    margin-right: .2rem;
+}
+
+.comment-like-btn {
+    margin: 0 1rem;
+}
+
+.comment-like-btn  svg {
+    width: .8rem;
+}
